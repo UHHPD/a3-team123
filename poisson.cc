@@ -19,15 +19,14 @@ int main() {
         }
       }
   fin.close();
-  for ( unsigned int k = 0 ; k < zaehler . size () ; ++ k ) {
+  for ( unsigned int k = 0 ; k < zaehler.size () ; ++ k ) {
   fou << k << " " << zaehler[k] << std::endl;
   std::cout << k << ":" << zaehler [ k ] << std::endl ;
   }
-  for(int i = 0; i < 234 ; i++)
-  {
-      double p = poisson(3.11538, i);
-      fou2 << p; 
-    }
+  for (int k = 0 ; k < zaehler.size () ; ++ k ) {
+  fou2 << k << " " << zaehler[k] << " " << poisson(3.11538, k) << std::endl;
+  std::cout << k << " " << zaehler[k] << " : " << poisson (3.11538, k) << std::endl ;
+  }
 }
 double poisson(double mu, int k)
 {
