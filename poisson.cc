@@ -4,9 +4,10 @@
 #include <cmath>
 using namespace std;
 
+double poisson(double mu, int k);
 
 int main() {
-    ofstream fou2("histpoi.txt")
+    ofstream fou2("histpoi.txt");
     ofstream fou("hist.txt");
     vector<int> zaehler(11);
     ifstream fin("datensumme.txt");
@@ -21,8 +22,11 @@ int main() {
   for ( unsigned int k = 0 ; k < zaehler . size () ; ++ k ) {
   fou << k << " " << zaehler[k] << std::endl;
   std::cout << k << ":" << zaehler [ k ] << std::endl ;
-  for(int i = 0; i < k , i++){
-      fou2 >> poisson(3.11538, k);
+  }
+  for(int i = 0; i < 234 ; i++)
+  {
+      double p = poisson(3.11538, i);
+      fou2 << p; 
     }
 }
 double poisson(double mu, int k)
