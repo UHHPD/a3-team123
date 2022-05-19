@@ -3,6 +3,7 @@
 #include <vector>
 #include <cmath>
 using namespace std;
+double m = 3.11538;
 
 double poisson(double mu, int k);
 
@@ -23,13 +24,12 @@ int main() {
   fou << k << " " << zaehler[k] << std::endl;
   std::cout << k << ":" << zaehler [ k ] << std::endl ;
   }
-  for (int k = 0 ; k < zaehler.size () ; ++ k ) {
-  fou2 << k << " " << zaehler[k] << " " << poisson(3.11538, k) << std::endl;
-  std::cout << k << " " << zaehler[k] << " : " << poisson (3.11538, k) << std::endl ;
+  for (int k = 0 ; k < zaehler.size () ; ++k ) {
+  fou2 << k << " " << zaehler[k] << " " << 234 * poisson(m, k) << std::endl;
   }
 }
 double poisson(double mu, int k)
 {
-  double pw = (pow(mu,k) * exp(-mu))/tgamma(k);
+  double pw = (pow(mu,k) * exp(-mu))/tgamma(k+1);
   return pw;
 }
